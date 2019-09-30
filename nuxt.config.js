@@ -56,6 +56,7 @@ export default {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    rtl: true,
     theme: {
       dark: false,
       themes: {
