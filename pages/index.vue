@@ -214,9 +214,9 @@
           xl6
         >
           <v-card class="mt-2">
-            <v-card-text>
-              <p class="title">
-                הגעתם עד לכאן ואתם זקוקים להדברה? אנחנו זמינים עבורכם
+            <v-card-text class="text-center">
+              <p class="title" >
+                הגעתם עד לכאן ואתם זקוקים להדברה?<br> אנחנו זמינים עבורכם
               </p>
               <p class="text-center">
 

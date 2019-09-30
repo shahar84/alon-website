@@ -38,6 +38,7 @@
     <v-app-bar
       fixed
       app
+      style="border-top:4px solid #6200ea "
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="isMobile"/>
       <div v-if="!isMobile">
@@ -53,7 +54,7 @@
         </v-btn>
       </div>
       <v-spacer/>
-      <v-btn href="tel:0547355113" text>054-7355113</v-btn>
+      <v-btn href="tel:0547355113" text color="deep-purple accent-4">054-7355113</v-btn>
       <v-spacer/>
 
       <v-toolbar-title v-text="title"/>
