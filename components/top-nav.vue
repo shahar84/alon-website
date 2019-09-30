@@ -39,8 +39,8 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="$vuetify.breakpoint.smAndDown"/>
-      <div v-if="!$vuetify.breakpoint.smAndDown">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="isMobile"/>
+      <div v-if="!isMobile">
         <v-btn
           v-for="(item, i) in items"
           :key="i"
@@ -64,11 +64,29 @@
 <script>
 export default {
     name: "top-nav",
+    computed: {
+        isMobile() {
+            return this.windowWidth < 780;
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize)
+    },
+    methods: {
+        handleResize() {
+            this.windowWidth = window.innerWidth;
+        }
+    },
     data() {
         return {
             clipped: false,
             drawer: false,
             fixed: false,
+            windowWidth: 0,
             items: [
                 {
                     icon: 'mdi-home',
