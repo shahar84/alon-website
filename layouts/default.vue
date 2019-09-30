@@ -2,10 +2,8 @@
   <v-app>
     <top-nav/>
     <v-content>
-      <v-container>
-        <nuxt/>
-      </v-container>
-    </v-content>
+         <nuxt/>
+     </v-content>
     <v-footer fixed app>
       <span>&copy; 2019</span>
     </v-footer>
