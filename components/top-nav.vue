@@ -4,6 +4,7 @@
       v-model="drawer"
       fixed
       app
+      right
     >
       <v-list>
         <v-list-item
@@ -39,8 +40,6 @@
         >
           {{item.title}}
         </v-btn>
-
-
       <v-spacer/>
       <v-toolbar-title v-text="title"/>
     </v-app-bar>
@@ -77,9 +76,6 @@ export default {
                 },
 
             ],
-            miniVariant: false,
-            right: true,
-            rightDrawer: false,
             title: 'אלון המדביר'
         }
     }
